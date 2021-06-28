@@ -19,6 +19,6 @@ from Proyecto1.views import saludo, damefecha
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url('holii', saludo),
+    url('saludo', saludo),
     url('fecha', damefecha)
 ]
