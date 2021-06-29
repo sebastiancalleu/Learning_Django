@@ -17,3 +17,13 @@ def damefecha(request):
 
     return HttpResponse(documento)
 
+def calcula(request, ano):
+    edad = 18
+    periodo = ano - 2019
+    edadfutura = edad + periodo
+    documento = """<html>
+    <body>
+    <h1>En el año {} tendras: {}
+    </body>
+    </html>""".format(ano, edadfutura)
+    return(documento)

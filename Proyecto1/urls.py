@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from Proyecto1.views import saludo, damefecha
+from Proyecto1.views import saludo, damefecha, calcula
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url('saludo', saludo),
-    url('fecha', damefecha)
+    url('fecha', damefecha),
+    url('edades/<int:ano>/', calcula)
 ]
